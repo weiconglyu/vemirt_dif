@@ -1,0 +1,38 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# Introduction
+
+The goal of `vemirt` is to detect differential item functioning (DIF) in two-parameter logistic (2PL) models via (Gaussian variational) expectation-maximization estimation.
+
+## Installation
+
+You can install the development version of `vemirt` from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("weiconglyu/vemirt")
+```
+
+## Example
+
+This is a basic example which shows you how to apply Gaussian variational expectation-maximization estimation with importance sampling to the simulated data from the package:
+
+```{r example}
+library(vemirt)
+result <- with(DIF_simdata, DIF_GVEMM(Y, D, X, 'IWGVEMM', Lambda0 = c(0.3, 0.5)))
+round(result[[1]]$beta, 3)
+round(result[[2]]$beta, 3)
+```

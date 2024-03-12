@@ -1,0 +1,22 @@
+Package: vemirt
+Type: Package
+Title: Regularized EM Algorithms for DIF Detection in 2PL Models via Variational Estimation
+Version: 0.1
+Date: 2024-03-11
+Authors@R: c(
+    person("Weicong", "Lyu", , "wlyu4@uw.edu", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-8159-2161")),
+    person("Ruoyi", "Zhu", , "zhux0445@uw.edu", role = c("aut"), comment = c(ORCID = "0000-0002-8159-2161")))
+Description: This package uses expectation-maximization (EM) algorithms for detecting differential item functioning (DIF) in two-parameter logistic (2PL) models.
+Encoding: UTF-8
+License: MIT + file LICENSE
+Imports: 
+    abind,
+    mirt,
+    Rcpp (>= 1.0.12),
+    RcppArmadillo,
+    torch
+LinkingTo: Rcpp, RcppArmadillo, RcppEigen
+Depends: 
+    R (>= 2.10)
+LazyData: true
+RoxygenNote: 7.3.1
